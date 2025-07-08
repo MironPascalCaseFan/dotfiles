@@ -4,6 +4,7 @@ require("vim._extui").enable {}
 require("core.options")
 require("core.autocommands")
 require("core.keymaps")
+require("core.statusline")
 
 local files = vim.api.nvim_get_runtime_file("lua/plugins/*.lua", true)
 local function load_file(path)
@@ -14,6 +15,8 @@ local function load_file(path)
   end, 2)
   coroutine.yield()
 end
+
+
 
 coroutine.wrap(function()
   for _, path in ipairs(files) do
