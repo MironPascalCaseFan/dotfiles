@@ -1,6 +1,8 @@
+vim.lsp.enable("clangd")
+
 vim.dap.adapters.cppdbg = {
-  id = 'cppdbg',
-  type = 'executable',
+  id = "cppdbg",
+  type = "executable",
   command = vim.get_mason_bin("OpenDebugAD7"),
 }
 
@@ -12,11 +14,11 @@ vim.dap.adapters.codelldb = {
 
 vim.dap.configurations.cpp = {
   {
-    name = 'Launch file (lldb-dap)',
-    type = 'lldb',
-    request = 'launch',
+    name = "Launch file (lldb-dap)",
+    type = "lldb",
+    request = "launch",
     program = "${command:pickFile}",
-    cwd = '${workspaceFolder}',
+    cwd = "${workspaceFolder}",
     stopOnEntry = false,
     runInTerminal = true,
     initCommands = {
@@ -27,8 +29,8 @@ vim.dap.configurations.cpp = {
     -- If you get an "Operation not permitted" error using this, try disabling YAMA:
     --  echo 0 | sudo tee /proc/sys/kernel/yama/ptrace_scope
     name = "Attach to process (lldb-dap)",
-    type = 'lldb', -- Adjust this to match your adapter name (`dap.adapters.<name>`)
-    request = 'attach',
+    type = "lldb", -- Adjust this to match your adapter name (`dap.adapters.<name>`)
+    request = "attach",
     pid = vim.dap.utils.pick_process,
     args = {},
   },
@@ -46,11 +48,11 @@ vim.dap.configurations.cpp = {
     MIMode = "gdb",
   },
   {
-    name = 'Launch cpptools',
-    type = 'lldb',
-    request = 'launch',
+    name = "Launch cpptools",
+    type = "lldb",
+    request = "launch",
     program = vim.dap.utils.pick_file,
-    cwd = '${workspaceFolder}',
+    cwd = "${workspaceFolder}",
     stopOnEntry = false,
     runInTerminal = false,
     args = {},
@@ -60,7 +62,7 @@ vim.dap.configurations.cpp = {
     type = "codelldb",
     request = "launch",
     program = vim.dap.utils.pick_file,
-    cwd = '${workspaceFolder}',
+    cwd = "${workspaceFolder}",
     stopOnEntry = false,
   },
 }

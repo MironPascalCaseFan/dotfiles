@@ -7,6 +7,7 @@ vim.pack.add {
 local gitsigns = require("gitsigns")
 
 gitsigns.setup {
+  -- update_debounce = 30,
   signs = {
     add = { text = "+" },
     change = { text = "~" },

@@ -3,6 +3,20 @@
 -- 3. Debugger
 -- 4. Indents and other specific language options
 
+vim.lsp.config("lua_ls", {
+  settings = {
+    Lua = {
+      workspace = {
+        checkThirdParty = false,
+        library = {
+          vim.env.VIMRUNTIME
+        },
+      }
+    },
+  }
+})
+vim.lsp.enable("lua_ls")
+
 vim.snippet.add("au", [[
 vim.api.nvim_create_autocmd("${1:Event}", {
   callback = function(args)
