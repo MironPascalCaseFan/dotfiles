@@ -9,9 +9,9 @@ require("core.statusline")
 local function load_file(path)
   local co = coroutine.running()
   vim.defer_fn(function()
-    local start = vim.uv.hrtime()
+    -- local start = vim.uv.hrtime()
     loadfile(path)()
-    print(path, " loading time: ", (vim.uv.hrtime() - start) / 1000000, "ms")
+    -- print(path, " loading time: ", (vim.uv.hrtime() - start) / 1000000, "ms")
     coroutine.resume(co)
   end, 2)
   coroutine.yield()
@@ -31,7 +31,11 @@ coroutine.wrap(function()
     end
   end
 
+  local cur_ft = vim.bo.filetype
   for ft, callback in pairs(vim.ftplugin) do
+    if ft == cur_ft then
+      callback()
+    end
     vim.api.nvim_create_autocmd("FileType", {
       pattern = ft,
       callback = callback

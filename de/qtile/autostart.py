@@ -13,6 +13,7 @@ def autostart():
         "anki &",
         "wezterm &",
         "google-chrome &"
+        "obsidian &"
     ]
 
     for cmd in autostartup:

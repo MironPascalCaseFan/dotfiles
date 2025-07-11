@@ -52,7 +52,7 @@ groups.append(Group("1", label="D"))
 groups.append(Group("2", label="", matches=[Match(wm_class=["org.wezfurlong.wezterm"])] ))
 groups.append(Group("3", label="󰈹", matches=[Match(wm_class=["Google-chrome"])] ))
 groups.append(Group("4", label="A", matches=[Match(wm_class=["Anki"])] ))
-groups.append(Group("5", label="󰉋"))
+groups.append(Group("5", label="󰉋", matches=[Match(wm_class=["obsidian"])]))
 
 for i in groups:
     keys.extend(

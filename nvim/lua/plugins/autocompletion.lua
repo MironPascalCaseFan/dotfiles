@@ -124,14 +124,9 @@ opts.window.completion.scrolloff = 5
 cmp.setup(opts)
 
 require("nvim-autopairs").setup {}
-
 local cmp_autopairs = require("nvim-autopairs.completion.cmp")
-
-cmp.event:on(
-  "confirm_done",
-  cmp_autopairs.on_confirm_done()
-)
+cmp.event:on("confirm_done", cmp_autopairs.on_confirm_done())
 
 require("luasnip").config.setup { history = true }
-vim.keymap.set("n", "<c-n>", function() require("luasnip").jump(1) end)
-vim.keymap.set("n", "<c-p>", function() require("luasnip").jump(-1) end)
+vim.keymap.set({ "n", "i" }, "<c-n>", function() require("luasnip").jump(1) end)
+vim.keymap.set({ "n", "i" }, "<c-p>", function() require("luasnip").jump(-1) end)
