@@ -74,3 +74,8 @@ vim.keymap.set("n", "M", vim.diagnostic.open_float)
 vim.keymap.set("n", "K", function() vim.lsp.buf.hover({ border = "rounded" }) end)
 vim.keymap.set("n", "<leader>lf", vim.lsp.buf.format, { desc = "Lsp format buffer" })
 vim.keymap.set("n", "<leader>;", "<CMD>:noh<CR>", { desc = "clear search hl", silent = true })
+
+vim.keymap.set("n", "<leader>e", function()
+  require("plugins.neo-tree")
+  vim.cmd("Neotree toggle reveal")
+end, { desc = "Toggle file tree" })
