@@ -1,9 +1,13 @@
 vim.lsp.enable("ts_ls")
+vim.lsp.enable("html")
+vim.lsp.enable("cssls")
+vim.lsp.enable("jsonls")
+vim.lsp.enable("emmet_language_server")
 
 vim.snippet.add("at", "/** @type {${1:Type}} */\n$0", { ft = "javascript" })
 vim.snippet.add("ai", "/** @implements {${1:Interface}} */\n$0", { ft = "javascript" })
 vim.snippet.add("ad", "/** @typedef {${0:Typename}} */\n$0", { ft = "javascript" })
-vim.snippet.add("lg", 'console.log($1)', { ft = "javascript" })
+vim.snippet.add("lg", "console.log($1)", { ft = "javascript" })
 vim.snippet.add("la", [[(${1:params}) => {
   ${2:body}
 }
@@ -52,5 +56,3 @@ vim.dap.configurations.javascript = {
     webRoot = "${workspaceFolder}"
   }
 }
-
--- https://github.com/tapio/live-server

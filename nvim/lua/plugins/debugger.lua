@@ -4,10 +4,6 @@ vim.pack.add {
   "https://github.com/miroshQa/debugmaster.nvim"
 }
 
-vim.fn.sign_define("DapBreakpoint", { text = "", texthl = "red" })
-vim.fn.sign_define("DapBreakpointCondition", { text = "", texthl = "blue" })
-vim.fn.sign_define("DapBreakpointRejected", { text = "", texthl = "orange" })
-vim.fn.sign_define("DapStopped", { text = "󰁕", texthl = "green" })
 
 
 local dm = require("debugmaster")

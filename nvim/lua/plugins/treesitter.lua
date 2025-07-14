@@ -48,3 +48,5 @@ tsj.setup {
 
 vim.keymap.set("n", "gs", function() tsj.toggle() end, { desc = "Toggle split/join" })
 vim.keymap.set("n", "gS", function() tsj.toggle { split = { recursive = true } } end, { desc = "Toggle split/join (recursive)" })
+
+require("nvim-ts-autotag").setup {}

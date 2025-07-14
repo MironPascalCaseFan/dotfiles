@@ -86,6 +86,7 @@ function _G.statusline()
     "%h%w%m%r",
     -- git(),
     diagnostics(),
+    hl("StatusLine"),
     macro(),
     "%=",
     lsp_status(),

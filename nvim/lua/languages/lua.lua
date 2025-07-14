@@ -60,5 +60,5 @@ vim.keymap.set("${1:mode}", "${2:key}", ${3:action})
 
 vim.ftplugin.lua = function()
   vim.keymap.set("v", "r", ":'<,'>lua<CR>", { buffer = 0, silent = true })
-  vim.keymap.set("n", "R", ":source %<CR>", { buffer = 0, silent = true })
+  -- vim.keymap.set("n", "R", ":source %<CR>", { buffer = 0, silent = true })
 end
