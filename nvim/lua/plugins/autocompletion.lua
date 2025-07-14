@@ -43,10 +43,6 @@ local types = require("cmp.types")
 local luasnip = require("luasnip")
 local compare = cmp.config.compare
 local opts = {
-  enabled = function()
-    return vim.api.nvim_get_option_value("buftype", { buf = 0 }) ~= "prompt"
-      or require("cmp_dap").is_dap_buffer()
-  end,
   performance = {
     debounce = 0,
     throttle = 0,
