@@ -8,7 +8,7 @@
 
 ---@async
 ---@param future Future
----@return any Future Future result. No good generics support, hence any :( 
+---@return any Future Future result. No good generics support, hence any :(
 local function await(future)
   local thread = assert(coroutine.running())
   local future_finished = false
@@ -60,7 +60,30 @@ local function wait(ms)
 end
 
 coroutine.wrap(function()
+  -- first example
   local future1 = await(wait(1000))
   local future2 = await(wait(1000))
   print("all futures done")
+
+  --second example
+  -- https://doc.rust-lang.org/book/ch17-02-concurrency-with-async.html
+  local task1 = function(cb)
+    for i = 1, 10 do
+      print(string.format("hi number {%s} from the first task", i))
+      await(wait(500))
+    end
+    cb()
+  end
+
+  local task2 = function(cb)
+    for i = 1, 5 do
+      print(string.format("hi number {%s} from the second task", i))
+      await(wait(500))
+    end
+    cb()
+  end
+  await(join { task1, task2 })
+  print("program finished")
+  -- well, that kind of doesn't work as I thought XD :)
+  -- need to figure out how to fix it. Each future in separate coroutine or what???
 end)()

@@ -50,11 +50,11 @@ vim.keymap.set("n", "<leader>j", fzf.lsp_document_symbols, { desc = "Find lsp sy
 vim.keymap.set("n", "<leader>J", fzf.lsp_live_workspace_symbols, { desc = "Find lsp workspace symbols (Jump)" })
 vim.keymap.set("n", "<leader>i", fzf.lsp_document_diagnostics, { desc = "Find diagnostics" })
 vim.keymap.set("n", "<leader>I", fzf.lsp_workspace_diagnostics, { desc = "Find workspace diagnostics" })
-vim.keymap.set("n", "gd", fzf.lsp_definitions)
-vim.keymap.set("n", "gr", fzf.lsp_references)
-vim.keymap.set("n", "go", fzf.lsp_code_actions)
-vim.keymap.set("n", "gi", fzf.lsp_implementations, { desc = "lsp implementations" })
-vim.keymap.set("n", "gy", fzf.lsp_typedefs, { desc = "lsp type definitions" })
+vim.keymap.set("n", "gd", fzf.lsp_definitions, { desc = "Go to definition" })
+vim.keymap.set("n", "gr", fzf.lsp_references, { desc = "Go to references" })
+vim.keymap.set("n", "go", fzf.lsp_code_actions, { desc = "Code actions" })
+vim.keymap.set("n", "gi", fzf.lsp_implementations, { desc = "Go to implementations" })
+vim.keymap.set("n", "gy", fzf.lsp_typedefs, { desc = "Go to type definition" })
 
 -- <leader>s namespace
 vim.keymap.set("n", "<leader>sc", fzf.git_bcommits, { desc = "Find buffer commits" })
