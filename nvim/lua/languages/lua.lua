@@ -2,10 +2,18 @@
 -- 2. Lsp server
 -- 3. Debugger
 -- 4. Indents and other specific language options
-
+-- https://github.com/LuaLS/vscode-lua/blob/master/setting/schema.json
 vim.lsp.config("lua_ls", {
   settings = {
     Lua = {
+      runtime = {
+        version = "LuaJIT",
+      },
+      diagnostics = {
+        groupFileStatus = {
+          redefined = "None",
+        }
+      },
       workspace = {
         checkThirdParty = false,
         library = {

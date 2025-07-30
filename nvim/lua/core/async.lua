@@ -119,3 +119,8 @@ coroutine.wrap(function()
     await(join { task1, task2 })
   end, "third example")
 end)()
+
+return {
+  await = await,
+  join = join,
+}
