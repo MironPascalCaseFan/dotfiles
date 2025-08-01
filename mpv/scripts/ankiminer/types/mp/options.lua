@@ -1,0 +1,68 @@
+---@meta
+local options
+
+-- mpv comes with a built-in module to manage options from config-files and the
+-- command-line. All you have to do is to supply a table with default options to
+-- the read_options function. The function will overwrite the default values
+-- with values found in the config-file and the command-line (in that order).
+--
+-- A `table` with key-value pairs. The type of the default values is
+-- important for converting the values read from the config file or
+-- command-line back. Do not use `nil` as a default value!
+--
+-- The `identifier` is used to identify the config-file and the command-line
+-- options. These needs to unique to avoid collisions with other scripts.
+-- Defaults to `mp.get_script_name()` if the parameter is `nil` or missing.
+--
+-- The `on_update` parameter enables run-time updates of all matching option
+-- values via the `script-opts` option/property. If any of the matching
+-- options changes, the values in the `table` (which was originally passed to
+-- the function) are changed, and `on_update(list)` is called. `list` is
+-- a table where each updated option has a `list[option_name] = true` entry.
+-- There is no initial `on_update()` call. This never re-reads the config file.
+-- `script-opts` is always applied on the original config file, ignoring
+-- previous `script-opts` values (for example, if an option is removed from
+-- `script-opts` at runtime, the option will have the value in the config
+-- file). `table` entries are only written for option values whose values
+-- effectively change (this is important if the script changes `table`
+-- entries independently).
+--
+-- Example implementation
+--
+-- ```lua
+-- local options = {
+--     optionA = "defaultvalueA",
+--     optionB = -0.5,
+--     optionC = true,
+-- }
+-- ```
+--
+-- require "mp.options".read_options(options, "myscript")
+-- print(options.optionA)
+--
+-- The config file will be stored in `script-opts/identifier.conf` in mpv's user
+-- folder. Comment lines can be started with # and stray spaces are not removed.
+-- Boolean values will be represented with yes/no.
+--
+-- Example config
+--
+-- ```conf
+-- # comment
+-- optionA=Hello World
+-- optionB=9999
+-- optionC=no
+-- ```
+--
+-- Command-line options are read from the `--script-opts` parameter. To avoid
+-- collisions, all keys have to be prefixed with `identifier-`.
+--
+-- Example command-line
+--
+--```
+--  --script-opts=myscript-optionA=TEST,myscript-optionB=0,myscript-optionC=yes
+--```
+---@param identifier? any
+---@param on_update? any
+function options.read_options(table, identifier, on_update) end
+
+return options
