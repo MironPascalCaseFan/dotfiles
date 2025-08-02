@@ -1,0 +1,17 @@
+{
+  "$schema": "https://json.schemastore.org/tsconfig",
+  "compilerOptions": {
+    // https://stackoverflow.com/questions/42984889/global-types-in-typescript
+    "paths": {
+      "*": ["./types/*.d.ts"],
+    },
+    "target": "es5",
+    "module": "esnext",
+    "moduleResolution": "node",
+    "skipLibCheck": true,
+    "lib": [
+      "ES5",
+      "ES2015.Promise"
+    ],
+  },
+}
