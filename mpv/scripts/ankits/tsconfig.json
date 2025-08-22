@@ -5,10 +5,14 @@
     "paths": {
       "*": ["./types/*.d.ts"],
     },
-    "target": "es5",
+    "target": "esnext",
     "module": "esnext",
+    "rootDir": "./src/",
+    "outDir": "./out/js/",
     "moduleResolution": "node",
     "skipLibCheck": true,
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
     "lib": [
       "ES5",
       "ES2015.Promise"
