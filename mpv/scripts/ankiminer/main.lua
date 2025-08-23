@@ -165,41 +165,41 @@ end
 ------------------------------------------------------------
 -- Finally, set an 'entry point' in mpv
 
-mp.add_key_binding(options.shortcut, options.shortcut, menu_open)
-mp.add_key_binding("G", "abob", function()
-  local input = require("mp.input")
-  input.get({
-    prompt = "Enter word for dictionary lookup and export: ",
-    submit = function(value)
-      print(value)
-      ctx.word = value
-      input.terminate()
-    end
-  })
-end)
-
-mp.observe_property("sub-text", "string", function()
-  if ctx.start_time ~= -1 then
-    ---@type string?
-    local subs, secondary = get_current_subtitles()
-    table.insert(ctx.subtitles.main, subs)
-    table.insert(ctx.subtitles.secondary, secondary)
-    menu_update()
-    inspect(ctx.subtitles.main)
-  end
-end)
-
-mp.observe_property("time-pos", "number", function()
-  if ctx.start_time == -1 then
-    return
-  end
-  local time = mp.get_property_number("time-pos")
-  ctx.end_time = time
-  menu_update()
-end)
-
-mp.register_event("seek", function()
-  reset_recording()
-  print("RECORDING ABORTED")
-  menu_update()
-end)
+-- mp.add_key_binding(options.shortcut, options.shortcut, menu_open)
+-- mp.add_key_binding("G", "abob", function()
+--   local input = require("mp.input")
+--   input.get({
+--     prompt = "Enter word for dictionary lookup and export: ",
+--     submit = function(value)
+--       print(value)
+--       ctx.word = value
+--       input.terminate()
+--     end
+--   })
+-- end)
+--
+-- mp.observe_property("sub-text", "string", function()
+--   if ctx.start_time ~= -1 then
+--     ---@type string?
+--     local subs, secondary = get_current_subtitles()
+--     table.insert(ctx.subtitles.main, subs)
+--     table.insert(ctx.subtitles.secondary, secondary)
+--     menu_update()
+--     inspect(ctx.subtitles.main)
+--   end
+-- end)
+--
+-- mp.observe_property("time-pos", "number", function()
+--   if ctx.start_time == -1 then
+--     return
+--   end
+--   local time = mp.get_property_number("time-pos")
+--   ctx.end_time = time
+--   menu_update()
+-- end)
+--
+-- mp.register_event("seek", function()
+--   reset_recording()
+--   print("RECORDING ABORTED")
+--   menu_update()
+-- end)

@@ -1,4 +1,4 @@
-export {}
+export { }
 
 declare global {
   // Timers (global)
@@ -11,4 +11,10 @@ declare global {
   function print(...msg: unknown[]): void;
   function dump(...msg: unknown[]): void;
   function exit(): void;
+  namespace mp {
+    namespace input {
+      function get(params: any);
+      function terminate();
+    }
+  }
 }

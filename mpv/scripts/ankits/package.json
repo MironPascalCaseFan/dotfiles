@@ -12,7 +12,6 @@
   "description": "",
   "dependencies": {
     "core-js": "^3.45.1",
-    "mpv-assdraw": "^0.1.0",
     "parse5": "^8.0.0"
   },
   "devDependencies": {

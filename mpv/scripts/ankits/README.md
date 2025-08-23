@@ -15,3 +15,4 @@ https://mpv.io/manual/master/#javascript
 vendored mpv http lib: https://github.com/Hill-98/mpv-javascript-http
 mpv scripts list: https://github.com/mpv-player/mpv/wiki/User-Scripts#javascript
 ass js mpv player lib repo: https://github.com/Kagami/mpv-assdraw#readme
+mpv promise polyfill with usage examples: https://www.npmjs.com/package/mpv-promise
