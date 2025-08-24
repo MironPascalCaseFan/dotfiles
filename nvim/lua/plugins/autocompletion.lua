@@ -34,7 +34,6 @@ vim.pack.add {
   "https://github.com/saadparwaiz1/cmp_luasnip",
   "https://github.com/hrsh7th/cmp-nvim-lsp",
   "https://github.com/hrsh7th/cmp-path",
-  "https://github.com/rcarriga/cmp-dap",
   "https://github.com/windwp/nvim-autopairs"
 }
 
@@ -91,7 +90,6 @@ local opts = {
     { name = "nvim_lsp" },
     { name = "luasnip" },
     { name = "path" }, -- type ./ to activate
-    { name = "dap", max_item_count = 10 }
   },
 
   window = {

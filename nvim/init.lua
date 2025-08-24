@@ -17,8 +17,6 @@ local function load_file(path)
   coroutine.yield()
 end
 
-
-
 coroutine.wrap(function()
   local groups = {
     vim.api.nvim_get_runtime_file("lua/plugins/*.lua", true),
