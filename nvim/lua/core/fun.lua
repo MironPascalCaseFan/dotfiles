@@ -32,4 +32,16 @@ local function test_server()
   -- To activate not canonical terminal mode: stty -icanon
 end
 
-test_server()
+-- test_server()
+
+local api = vim.api
+package.loaded["core.ui"] = nil
+local ui = require("core.ui")
+local Canvas, Line = ui.Canvas, ui.Line
+local canvas = Canvas.new(100, 100, ".")
+local line1 = Line.new("some text heheheheh")
+line1:render(canvas, {y = 2, x = 2, width = 200})
+
+local buf = api.nvim_create_buf(false, true)
+local win = api.nvim_open_win(buf, false, {split = "right"})
+canvas:draw(buf)
