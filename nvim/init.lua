@@ -28,15 +28,4 @@ coroutine.wrap(function()
       load_file(path)
     end
   end
-
-  local cur_ft = vim.bo.filetype
-  for ft, callback in pairs(vim.ftplugin) do
-    if ft == cur_ft then
-      callback()
-    end
-    vim.api.nvim_create_autocmd("FileType", {
-      pattern = ft,
-      callback = callback
-    })
-  end
 end)()

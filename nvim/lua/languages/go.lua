@@ -1,3 +1,5 @@
+vim.lsp.enable("gopls")
+
 vim.dap.adapters.delve = function(callback, config)
   if config.mode == 'remote' and config.request == 'attach' then
     callback({

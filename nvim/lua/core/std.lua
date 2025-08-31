@@ -19,6 +19,3 @@ vim.dap.utils = require("dap.utils")
 vim.dap.utils.query_args = function()
   return vim.split(vim.fn.input('Program arguments: '), " +")
 end
-
----@type table<string, fun()>
-vim.ftplugin = {}

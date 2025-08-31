@@ -65,8 +65,3 @@ local win = api.nvim_open_win(buf, false, {split = "right"})
 vim.snippet.add("k", [[
 vim.keymap.set("${1:mode}", "${2:key}", ${3:action})
 ]], { ft = "lua" })
-
-vim.ftplugin.lua = function()
-  vim.keymap.set("v", "r", ":'<,'>lua<CR>", { buffer = 0, silent = true })
-  -- vim.keymap.set("n", "R", ":source %<CR>", { buffer = 0, silent = true })
-end
