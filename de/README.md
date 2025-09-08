@@ -10,3 +10,4 @@ Software I use:
 5. rofi (apps picker)
 6. mpv player
 7. zoxide
+8. zathura (pdf viewer with vim keybinds)

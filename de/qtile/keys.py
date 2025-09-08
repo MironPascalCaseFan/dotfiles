@@ -49,10 +49,14 @@ mouse = [
 groups = []
 
 groups.append(Group("1", label="D"))
-groups.append(Group("2", label="", matches=[Match(wm_class=["org.wezfurlong.wezterm"])] ))
-groups.append(Group("3", label="󰈹", matches=[Match(wm_class=["Google-chrome"])] ))
-groups.append(Group("4", label="A", matches=[Match(wm_class=["Anki"])] ))
-groups.append(Group("5", label="󰉋", matches=[Match(wm_class=["obsidian"])]))
+groups.append(Group("2", label=""))
+groups.append(Group("3", label="󰈹"))
+groups.append(Group("4", label="A"))
+groups.append(Group("5", label="󰉋"))
+groups.append(Group("6", label="6"))
+groups.append(Group("7", label="7"))
+groups.append(Group("8", label="8"))
+groups.append(Group("9", label="9"))
 
 for i in groups:
     keys.extend(
