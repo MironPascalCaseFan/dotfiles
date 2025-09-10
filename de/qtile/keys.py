@@ -27,6 +27,7 @@ keys = [
     Key([mod, "control"], "r", lazy.reload_config(), desc="Reload the config"),
     Key([mod, "control"], "q", lazy.shutdown(), desc="Shutdown Qtile"),
     Key([mod], "r", lazy.spawn("rofi -show drun"), desc="Spawn a command using a prompt widget"),
+    Key([mod], "a", lazy.spawn("rofi -show window"), desc="Spawn a command using a prompt widget"),
 
     Key([mod], "space",  lazy.widget["keyboardlayout"].next_keyboard()),
     # https://github.com/i3/i3/discussions/4763

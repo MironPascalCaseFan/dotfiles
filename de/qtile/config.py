@@ -1,6 +1,5 @@
 from libqtile import bar, layout, qtile, widget
 from libqtile.lazy import lazy
-from colors import colors
 import autostart
 
 from libqtile.config import Click, Drag, Group, Key, Match, Screen
@@ -12,10 +11,10 @@ from screens import screens
 
 layouts = [
     layout.Columns(
-        border_width=3,
-        margin=5,
-        border_focus="#92dce5",
-        border_normal="#DEDEDE",
+        border_width=5,
+        margin=0,
+        border_focus="#fabd2f",
+        border_normal="#928374",
     ),
 ]
 
