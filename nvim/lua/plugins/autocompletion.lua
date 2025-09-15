@@ -31,7 +31,6 @@ local kind_icons = {
 vim.pack.add {
   "https://github.com/hrsh7th/nvim-cmp",
   "https://github.com/L3MON4D3/LuaSnip",
-  "https://github.com/saadparwaiz1/cmp_luasnip",
   "https://github.com/hrsh7th/cmp-nvim-lsp",
   "https://github.com/hrsh7th/cmp-path",
   "https://github.com/windwp/nvim-autopairs"
@@ -51,7 +50,6 @@ local opts = {
       vim_item.kind = string.format("%s %s", kind_icons[vim_item.kind], vim_item.kind)
       vim_item.menu = ({
         nvim_lsp = "",
-        luasnip = "",
         nvim_lua = "",
         latex_symbolc = "",
       })[entry.source.name]
@@ -88,7 +86,6 @@ local opts = {
   },
   sources = cmp.config.sources {
     { name = "nvim_lsp" },
-    { name = "luasnip" },
     { name = "path" }, -- type ./ to activate
   },
 

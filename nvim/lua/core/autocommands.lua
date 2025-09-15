@@ -1,12 +1,12 @@
-vim.api.nvim_create_autocmd('TextYankPost', {
-  desc = 'Highlight when yanking (copying) text',
+vim.api.nvim_create_autocmd("TextYankPost", {
+  desc = "Highlight when yanking (copying) text",
   callback = function()
     vim.highlight.on_yank()
   end,
 })
 
 vim.api.nvim_create_autocmd("FileType", {
-  pattern = {"help"},
+  pattern = { "help" },
   callback = function()
     vim.keymap.set("n", "q", "<cmd>q<CR>", { buffer = 0 })
   end
@@ -29,12 +29,11 @@ vim.api.nvim_create_autocmd("LspAttach", {
         buffer = event.buf,
         callback = vim.lsp.buf.clear_references,
       })
-
     end
   end,
 })
 
-vim.api.nvim_create_autocmd('VimResized', {
+vim.api.nvim_create_autocmd("VimResized", {
   callback = function(ev)
     vim.cmd("wincmd =")
   end,
@@ -52,3 +51,7 @@ vim.api.nvim_create_autocmd("CmdlineChanged", {
 })
 
 vim.keymap.set("c", "<Tab>", "<C-n>")
+vim.cmd([[
+cnoremap <Left> <Space><BS><Left>
+cnoremap <Right> <Space><BS><Right>
+]])
