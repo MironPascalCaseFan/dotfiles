@@ -39,3 +39,16 @@ vim.api.nvim_create_autocmd('VimResized', {
     vim.cmd("wincmd =")
   end,
 })
+
+
+vim.opt.wildmode = "noselect"
+vim.opt.wildoptions = "fuzzy"
+
+vim.api.nvim_create_autocmd("CmdlineChanged", {
+  pattern = ":",
+  callback = function()
+    vim.fn.wildtrigger()
+  end,
+})
+
+vim.keymap.set("c", "<Tab>", "<C-n>")
