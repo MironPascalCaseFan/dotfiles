@@ -1,5 +1,6 @@
 from libqtile.lazy import lazy
 from libqtile.config import Click, Drag, Group, Key, Match, Screen
+from screens import sing_box_widget
 
 mod = "mod4"
 terminal = "wezterm"
@@ -38,6 +39,7 @@ keys = [
     Key([], "XF86AudioMute", lazy.spawn("pactl set-sink-mute @DEFAULT_SINK@ toggle")),
     Key([], "XF86AudioRaiseVolume", lazy.spawn("amixer -D pulse sset Master 10%+")),
     Key([], "XF86AudioLowerVolume", lazy.spawn("amixer -D pulse sset Master 10%-")),
+    Key([mod], "p", lazy.function(lambda qtile: sing_box_widget.toggle_proxy()))
 ]
 
 # Drag floating layouts.

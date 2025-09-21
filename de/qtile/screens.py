@@ -6,6 +6,7 @@ from qtile_extras.widget.bluetooth import Bluetooth
 from qtile_extras.widget.decorations import RectDecoration, BorderDecoration
 from utils import *
 
+from widgets import SingBoxStatus
 
 widget_radius = 0
 fontsize = 50
@@ -15,6 +16,15 @@ sep_config = {
         "size_percent": 0,
         "padding": 8,
 }
+
+sing_box_widget = SingBoxStatus(
+                    foreground="#928374",
+                    start_cmd=[
+                        "/home/miron/repos/vpn/sing-box/sing-box", "run", "-c",
+                        "/home/miron/repos/vpn/sing-box/config.json",
+                    ],
+                    update_interval=5
+                )
 
 screens = [
     Screen(
@@ -35,6 +45,7 @@ screens = [
                     format='{down:.0f}{down_suffix} ↓↑ {up:.0f}{up_suffix}',
                     foreground="#928374",
                 ),
+                sing_box_widget,
                 widget.Sep(**sep_config),
                 widget.Clock(
                     format="󰥔 %I:%M",
