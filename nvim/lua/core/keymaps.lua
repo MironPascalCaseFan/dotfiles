@@ -2,10 +2,6 @@ local map = vim.keymap.set
 local del = vim.keymap.del
 
 -- Windows / Tabs Navigation
-map('n', '<left>', '<C-w><C-h>', { desc = 'Move focus to the left window' })
-map('n', '<right>', '<C-w><C-l>', { desc = 'Move focus to the right window' })
-map('n', '<down>', '<C-w><C-j>', { desc = 'Move focus to the lower window' })
-map('n', '<up>', '<C-w><C-k>', { desc = 'Move focus to the upper window' })
 map("n", "[t", "<cmd>tabp<CR>", { desc = "Go to prev tab" })
 map("n", "]t", "<cmd>tabn<CR>", { desc = "Go to next tab" })
 
