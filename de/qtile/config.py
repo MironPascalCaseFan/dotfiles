@@ -15,6 +15,7 @@ layouts = [
         margin=0,
         border_focus="#fabd2f",
         border_normal="#928374",
+        wrap_focus_columns=False,
     ),
 ]
 
