@@ -15,8 +15,12 @@ map("n", "<C-p>", "<cmd>cprev<CR>")
 -- Improved motions (Visual mode)
 map('v', '<', '<gv', { noremap = true, silent = true })
 map('v', '>', '>gv', { noremap = true, silent = true })
+
+-- snippets stuff
 del("s", "<")
 del("s", ">")
+vim.keymap.set({ "n", "i", "s" }, "<c-n>", function() vim.snippet.jump(1) end)
+vim.keymap.set({ "n", "i", "s" }, "<c-p>", function() vim.snippet.jump(-1) end)
 
 map('n', '<leader>ld', function()
   vim.diagnostic.enable(not vim.diagnostic.is_enabled())

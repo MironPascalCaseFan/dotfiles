@@ -30,7 +30,6 @@ local kind_icons = {
 
 vim.pack.add {
   "https://github.com/hrsh7th/nvim-cmp",
-  "https://github.com/L3MON4D3/LuaSnip",
   "https://github.com/hrsh7th/cmp-nvim-lsp",
   "https://github.com/hrsh7th/cmp-path",
   "https://github.com/windwp/nvim-autopairs"
@@ -38,7 +37,6 @@ vim.pack.add {
 
 local cmp = require("cmp")
 local types = require("cmp.types")
-local luasnip = require("luasnip")
 local compare = cmp.config.compare
 local opts = {
   performance = {
@@ -60,7 +58,7 @@ local opts = {
   },
   snippet = {
     expand = function(args)
-      luasnip.lsp_expand(args.body)
+      vim.snippet.expand(args.body)
     end,
   },
   completion = {
@@ -117,7 +115,3 @@ cmp.setup(opts)
 require("nvim-autopairs").setup {}
 local cmp_autopairs = require("nvim-autopairs.completion.cmp")
 cmp.event:on("confirm_done", cmp_autopairs.on_confirm_done())
-
-require("luasnip").config.setup { history = true }
-vim.keymap.set({ "n", "i" }, "<c-n>", function() require("luasnip").jump(1) end)
-vim.keymap.set({ "n", "i" }, "<c-p>", function() require("luasnip").jump(-1) end)
