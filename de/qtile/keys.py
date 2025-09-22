@@ -33,12 +33,14 @@ keys = [
     Key([mod], "space",  lazy.widget["keyboardlayout"].next_keyboard()),
     # https://github.com/i3/i3/discussions/4763
     # chmod helps
-    Key([], "XF86MonBrightnessUp", lazy.spawn("brightnessctl set +10%")),
-    Key([], "XF86MonBrightnessDown", lazy.spawn("brightnessctl set 10%-")),
+    Key([mod, "shift"], "bracketright", lazy.spawn("brightnessctl set +10%")),
+    Key([mod, "shift"], "bracketleft", lazy.spawn("brightnessctl set 10%-")),
+
     # pulseaudio required
-    Key([], "XF86AudioMute", lazy.spawn("pactl set-sink-mute @DEFAULT_SINK@ toggle")),
-    Key([], "XF86AudioRaiseVolume", lazy.spawn("amixer -D pulse sset Master 10%+")),
-    Key([], "XF86AudioLowerVolume", lazy.spawn("amixer -D pulse sset Master 10%-")),
+    Key([mod], "m", lazy.spawn("pactl set-sink-mute @DEFAULT_SINK@ toggle")),
+    Key([mod], "bracketright", lazy.spawn("amixer -D pulse sset Master 10%+")),
+    Key([mod], "bracketleft", lazy.spawn("amixer -D pulse sset Master 10%-")),
+
     Key([mod], "p", lazy.function(lambda qtile: sing_box_widget.toggle_proxy()))
 ]
 
