@@ -17,3 +17,22 @@ vim.dap.utils = require("dap.utils")
 vim.dap.utils.query_args = function()
   return vim.split(vim.fn.input('Program arguments: '), " +")
 end
+
+---Allows you to pick any file in your current directory and return it as a string
+---@async
+---@return string
+vim.pick_file = function(cmd)
+  cmd = cmd or "find ."
+  local co = coroutine.running()
+  require("fzf-lua").files({
+    cmd = cmd,
+    git_icons = false,
+    file_icons = false,
+    actions = {
+      default = function(selected)
+        coroutine.resume(co, selected[1])
+      end
+    }
+  })
+  return coroutine.yield()
+end

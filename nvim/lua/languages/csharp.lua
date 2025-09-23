@@ -1,7 +1,7 @@
 vim.dap.adapters.coreclr = {
-  type = 'executable',
+  type = "executable",
   command = vim.get_mason_bin("netcoredbg"),
-  args = {'--interpreter=vscode'}
+  args = { "--interpreter=vscode" }
 }
 
 vim.dap.configurations.cs = {
@@ -11,7 +11,20 @@ vim.dap.configurations.cs = {
     request = "launch",
     console = "true",
     program = function()
-        return vim.fn.input('Path to dll', vim.fn.getcwd() .. '/bin/Debug/', 'file')
+      return vim.pick_file('find ./bin/Debug -type f -name "*.dll"')
     end,
   },
 }
+
+vim.lsp.config("roslyn_ls", {
+  cmd = {
+    "dotnet",
+    "/home/miron/realhome/tools/roslyn/content/LanguageServer/linux-x64/Microsoft.CodeAnalysis.LanguageServer.dll",
+    "--logLevel",                -- this property is required by the server
+    "Information",
+    "--extensionLogDirectory",   -- this property is required by the server
+    vim.fs.joinpath(vim.uv.os_tmpdir(), "roslyn_ls/logs"),
+    "--stdio",
+  }
+})
+vim.lsp.enable("roslyn_ls")
