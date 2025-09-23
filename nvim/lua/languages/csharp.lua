@@ -26,6 +26,39 @@ vim.dap.configurations.cs = {
     processId = vim.dap.utils.pick_process,
     console = "integratedTerminal",
   },
+  {
+    type = "coreclr",
+    name = "Run tests",
+    request = "attach",
+    processId = function()
+      local running = coroutine.running()
+      local dm = require("debugmaster")
+      local api = vim.api
+      local buf = api.nvim_create_buf(true, true)
+      api.nvim_buf_call(buf, function()
+        local id = vim.fn.jobstart("VSTEST_HOST_DEBUG=1 dotnet test", {
+          term = true,
+          on_stdout = function(_, data, name)
+            local out = table.concat(data, "\n")
+            local pid = out:match("Process Id:%s*(%d+)")
+            if pid and coroutine.status(running) == "suspended" then
+              coroutine.resume(running, pid)
+            end
+          end
+        })
+      end)
+      local pid = coroutine.yield()
+      -- little hack because debugmaster can't attach if no active session yet
+      -- TODO: this usecase must be tackled in debugmaster
+      vim.schedule(function()
+        local state = require("debugmaster.state")
+        state.terminal:attach_terminal_to_current_session(buf)
+        state.sidepanel:set_active(state.terminal)
+      end)
+      return pid
+    end,
+    console = "integratedTerminal",
+  },
 }
 
 vim.lsp.config("roslyn_ls", {
