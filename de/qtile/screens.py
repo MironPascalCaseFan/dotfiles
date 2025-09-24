@@ -9,7 +9,6 @@ from utils import *
 from widgets import SingBoxStatus
 
 widget_radius = 0
-fontsize = 50
 wallpaper = "~/.config/wallpapers/planet.jpg"
 
 sep_config = {
@@ -29,7 +28,7 @@ sing_box_widget = SingBoxStatus(
 )
 
 
-def create_bar():
+def create_bar(fontsize):
     return bar.Bar(
         [
             widget.GroupBox(
@@ -103,13 +102,13 @@ def create_bar():
 
 screens = [
     Screen(
-        top=create_bar(),
+        top=create_bar(fontsize=50),
         x11_drag_polling_rate=120,
         wallpaper=wallpaper,
         wallpaper_mode="fill",
     ),
     Screen(
-        top=create_bar(),
+        top=create_bar(fontsize=40),
         x11_drag_polling_rate=120,
         wallpaper=wallpaper,
         wallpaper_mode="fill",

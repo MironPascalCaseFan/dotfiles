@@ -18,10 +18,7 @@ keys = [
     Key([mod, "shift"], "j", lazy.layout.shuffle_down(), desc="Move window down"),
     Key([mod, "shift"], "k", lazy.layout.shuffle_up(), desc="Move window up"),
 
-    Key([mod], "w", lazy.to_screen(0), desc="Focus monitor 1"),
-    Key([mod], "e", lazy.to_screen(1), desc="Focus monitor 2"),
-    Key([mod, "shift"], "w", lazy.window.toscreen(0), desc="Send window to monitor 1"),
-    Key([mod, "shift"], "e", lazy.window.toscreen(1), desc="Send window to monitor 2"),
+    Key([mod], "g", lazy.next_screen(), desc="Next screen"),
 
     Key([mod], "Return", lazy.spawn(terminal), desc="Launch terminal"),
     Key([mod], "s", lazy.spawn("flameshot gui"), desc="Launch terminal"),
