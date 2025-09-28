@@ -65,11 +65,15 @@ def create_bar(fontsize):
                 format="󰘚 {load_percent}%",
                 foreground="#928374",
             ),
+            widget.ThermalSensor(
+                fontsize=fontsize,
+                foreground="#928374",
+            ),
             widget.Sep(**sep_config),
             widget.Sep(**sep_config),
             widget.Battery(
                 fontsize=fontsize,
-                format="{char} {percent:2.0%}",
+                format="{char} {percent:2.0%} {watt:.1f} W",
                 charge_char="󰂄",
                 discharge_char="󰁹",
                 empty_char="󰂃",

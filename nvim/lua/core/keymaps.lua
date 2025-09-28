@@ -74,3 +74,5 @@ map("n", "<leader>e", function()
   require("plugins.neo-tree")
   vim.cmd("Neotree toggle reveal")
 end, { desc = "Toggle file tree" })
+
+map("x", "r", ":'<,'>lua<CR>")
