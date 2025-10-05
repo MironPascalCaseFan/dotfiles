@@ -9,3 +9,10 @@ vim.cmd([[
   autocmd FileType sql lua require('cmp').setup.buffer({ sources = {{ name = 'vim-dadbod-completion' }} })
 ]])
 
+local null_ls = require("null-ls")
+null_ls.setup {
+  sources = {
+    null_ls.builtins.formatting.sqruff,
+    null_ls.builtins.diagnostics.sqruff,
+  },
+}

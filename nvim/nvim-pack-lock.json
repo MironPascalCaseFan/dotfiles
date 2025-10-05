@@ -41,6 +41,10 @@
       "rev": "90dcfa7b",
       "src": "https://github.com/NeogitOrg/neogit"
     },
+    "none-ls.nvim": {
+      "rev": "5cf6384",
+      "src": "https://github.com/nvimtools/none-ls.nvim"
+    },
     "nui.nvim": {
       "rev": "de74099",
       "src": "https://github.com/MunifTanjim/nui.nvim"

@@ -2,6 +2,7 @@ vim.pack.add {
   "https://github.com/j-hui/fidget.nvim",
   "https://github.com/neovim/nvim-lspconfig",
   "https://github.com/williamboman/mason.nvim",
+  "https://github.com/nvimtools/none-ls.nvim"
 }
 
 vim.keymap.set("n", "<leader>lr", "<cmd>LspRestart<CR>", { desc = "Lsp restart" })
