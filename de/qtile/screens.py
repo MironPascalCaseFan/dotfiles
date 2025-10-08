@@ -1,9 +1,6 @@
 from libqtile import bar, layout, qtile
-from libqtile import widget as d_widget
-from qtile_extras import widget
+from libqtile import widget as widget
 from libqtile.config import Click, Drag, Group, Key, Match, Screen
-from qtile_extras.widget.bluetooth import Bluetooth
-from qtile_extras.widget.decorations import RectDecoration, BorderDecoration
 from utils import *
 
 from widgets import SingBoxStatus

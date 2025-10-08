@@ -9,8 +9,8 @@ map("n", "<leader>w", function() vim.cmd("silent! w") end, { desc = "Write buffe
 map("n", "<leader>q", function() vim.cmd("silent! q") end, { desc = "Quit window" })
 map("n", "ga", "<cmd>b#<CR>", { desc = "Go to last Accessed file (Ctrl + ^ synonim)" })
 map("x", "R", ":s###g<left><left><left>", { desc = "Start replacement in selected range" })
-map("n", "<C-n>", "<cmd>cnext<CR>")
-map("n", "<C-p>", "<cmd>cprev<CR>")
+map("n", "]q", "<cmd>cnext<CR>")
+map("n", "[q", "<cmd>cprev<CR>")
 
 -- Improved motions (Visual mode)
 map('v', '<', '<gv', { noremap = true, silent = true })

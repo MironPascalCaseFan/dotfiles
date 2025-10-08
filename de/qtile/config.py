@@ -20,7 +20,7 @@ layouts = [
 ]
 
 widget_defaults = dict(
-    font="Hack Nerd Font Mono",
+    font="JetBrainsMono Nerd Font",
     fontsize=30,
     padding=20,
 )
