@@ -33,9 +33,8 @@
       "src": "https://github.com/williamboman/mason.nvim"
     },
     "neo-tree.nvim": {
-      "rev": "981a43a",
-      "src": "https://github.com/nvim-neo-tree/neo-tree.nvim",
-      "version": "'3.0'"
+      "rev": "92d1e01",
+      "src": "https://github.com/nvim-neo-tree/neo-tree.nvim"
     },
     "neogit": {
       "rev": "90dcfa7b",
@@ -96,10 +95,6 @@
     "treesj": {
       "rev": "4770492",
       "src": "https://github.com/Wansmer/treesj"
-    },
-    "typst-preview.nvim": {
-      "rev": "1603d37",
-      "src": "https://github.com/chomosuke/typst-preview.nvim"
     },
     "vim-dadbod": {
       "rev": "e95afed",

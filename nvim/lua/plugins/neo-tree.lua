@@ -2,13 +2,15 @@ vim.pack.add {
   "https://github.com/nvim-lua/plenary.nvim",
   "https://github.com/nvim-tree/nvim-web-devicons",
   "https://github.com/MunifTanjim/nui.nvim",
-  {src = "https://github.com/nvim-neo-tree/neo-tree.nvim", version = "3.0"}
+  "https://github.com/nvim-neo-tree/neo-tree.nvim",
 }
 
 require("neo-tree").setup {
   popup_border_style = "rounded",
+  clipboard = {
+    sync = "universal",
+  },
   filesystem = {
-    shared_clipboard = true,
     hijack_netrw_behavior = "open_current",
     use_libuv_file_watcher = true,
     filtered_items = {
