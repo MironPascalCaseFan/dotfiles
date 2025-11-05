@@ -88,10 +88,6 @@
       "rev": "b9fd522",
       "src": "https://github.com/nvim-lua/plenary.nvim"
     },
-    "snacks.nvim": {
-      "rev": "bfe8c26",
-      "src": "https://github.com/folke/snacks.nvim"
-    },
     "treesj": {
       "rev": "4770492",
       "src": "https://github.com/Wansmer/treesj"
