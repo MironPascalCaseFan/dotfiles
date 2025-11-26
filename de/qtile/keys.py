@@ -18,6 +18,13 @@ keys = [
     Key([mod, "shift"], "j", lazy.layout.shuffle_down(), desc="Move window down"),
     Key([mod, "shift"], "k", lazy.layout.shuffle_up(), desc="Move window up"),
 
+    # mod1 means alt key
+    Key([mod, "mod1"], "h", lazy.layout.grow_left(), desc="Grow window to the left"),
+    Key([mod, "mod1"], "l", lazy.layout.grow_right(), desc="Grow window to the right"),
+    Key([mod, "mod1"], "j", lazy.layout.grow_down(), desc="Grow window down"),
+    Key([mod, "mod1"], "k", lazy.layout.grow_up(), desc="Grow window up"),
+    Key([mod], "n", lazy.layout.normalize(), desc="Reset all window sizes"),
+
     Key([mod], "g", lazy.next_screen(), desc="Next screen"),
 
     Key([mod], "Return", lazy.spawn(terminal), desc="Launch terminal"),
