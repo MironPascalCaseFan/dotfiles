@@ -1,7 +1,7 @@
 {
   "plugins": {
     "cmp-nvim-lsp": {
-      "rev": "bd5a7d6",
+      "rev": "cbc7b02",
       "src": "https://github.com/hrsh7th/cmp-nvim-lsp"
     },
     "cmp-path": {
@@ -9,11 +9,11 @@
       "src": "https://github.com/hrsh7th/cmp-path"
     },
     "debugmaster.nvim": {
-      "rev": "3d144b9",
+      "rev": "505d9a2",
       "src": "https://github.com/miroshQa/debugmaster.nvim"
     },
     "fidget.nvim": {
-      "rev": "3f54759",
+      "rev": "6446302",
       "src": "https://github.com/j-hui/fidget.nvim"
     },
     "fzf-lua": {
@@ -21,15 +21,15 @@
       "src": "https://github.com/ibhagwan/fzf-lua"
     },
     "gitsigns.nvim": {
-      "rev": "1ee5c1f",
+      "rev": "6bd2949",
       "src": "https://github.com/lewis6991/gitsigns.nvim"
     },
     "grug-far.nvim": {
-      "rev": "48f9afb",
+      "rev": "74eef26",
       "src": "https://github.com/MagicDuck/grug-far.nvim"
     },
     "mason.nvim": {
-      "rev": "ad7146a",
+      "rev": "57e5a8a",
       "src": "https://github.com/williamboman/mason.nvim"
     },
     "neo-tree.nvim": {
@@ -37,7 +37,7 @@
       "src": "https://github.com/nvim-neo-tree/neo-tree.nvim"
     },
     "neogit": {
-      "rev": "90dcfa7b",
+      "rev": "d8bf9102",
       "src": "https://github.com/NeogitOrg/neogit"
     },
     "none-ls.nvim": {
@@ -49,19 +49,19 @@
       "src": "https://github.com/MunifTanjim/nui.nvim"
     },
     "nvim-autopairs": {
-      "rev": "23320e7",
+      "rev": "c2a0dd0",
       "src": "https://github.com/windwp/nvim-autopairs"
     },
     "nvim-cmp": {
-      "rev": "b5311ab",
+      "rev": "c4f7dc7",
       "src": "https://github.com/hrsh7th/nvim-cmp"
     },
     "nvim-dap": {
-      "rev": "48570d8",
+      "rev": "7bb46cc",
       "src": "https://github.com/mfussenegger/nvim-dap"
     },
     "nvim-lspconfig": {
-      "rev": "e688b48",
+      "rev": "41ceb6b",
       "src": "https://github.com/neovim/nvim-lspconfig"
     },
     "nvim-treesitter": {
