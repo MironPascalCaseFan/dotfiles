@@ -17,11 +17,11 @@ cleanup() {
 trap cleanup SIGINT SIGTERM
 
 # ===== Gather files (sorted, deterministic) =====
-mapfile -t files < <(find . -type f -iname "*.mts" | sort)
+mapfile -t files < <(find . -type f \( -iname "*.mts" -o -iname "*.m2ts" \) | sort)
 total=${#files[@]}
 count=0
 
-echo "Found $total .mts files"
+echo "Found $total .mts/.m2ts files"
 echo
 
 for src in "${files[@]}"; do
