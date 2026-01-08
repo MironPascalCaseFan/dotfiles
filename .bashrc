@@ -24,3 +24,6 @@ function y() {
 
 # https://junegunn.github.io/fzf/shell-integration/
 eval "$(fzf --bash)"
+
+export EDITOR=nvim
+export VISUAL=nvim
