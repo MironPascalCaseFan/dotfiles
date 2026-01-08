@@ -51,8 +51,8 @@ keys = [
 
     # pulseaudio required
     Key([mod], "m", lazy.spawn("pactl set-sink-mute @DEFAULT_SINK@ toggle")),
-    Key([mod], "bracketright", lazy.spawn("amixer -D pulse sset Master 10%+")),
-    Key([mod], "bracketleft", lazy.spawn("amixer -D pulse sset Master 10%-")),
+    Key([mod], "bracketright", lazy.spawn("pactl set-sink-volume @DEFAULT_SINK@ +10%")),
+    Key([mod], "bracketleft", lazy.spawn("pactl set-sink-volume @DEFAULT_SINK@ -10%")),
 
     Key([mod], "p", lazy.function(lambda qtile: sing_box_widget.toggle_proxy()))
 ]
