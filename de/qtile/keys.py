@@ -29,7 +29,10 @@ keys = [
 
     Key([mod], "Return", lazy.spawn(terminal), desc="Launch terminal"),
     Key([mod], "s", lazy.spawn("flameshot gui"), desc="Launch terminal"),
-    Key([mod], "period", lazy.spawn("sh -c 'i3lock -i ~/.config/wallpapers/lockscreen.png'")),
+    Key([mod], "period",
+                lazy.spawn("sh -c 'i3lock -i ~/.config/wallpapers/lockscreen.png && sleep 0.1 && xset dpms force off'"),
+                desc="Lock screen and turn off monitor"
+    ),
     Key([mod], "Tab", lazy.next_layout(), desc="Toggle between layouts"),
     Key([mod], "q", lazy.window.kill(), desc="Kill focused window"),
     Key([mod], "f", lazy.window.toggle_fullscreen(), desc="Toggle fullscreen on the focused window"),
