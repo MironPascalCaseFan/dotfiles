@@ -26,7 +26,6 @@ keys = [
     Key([mod], "n", lazy.layout.normalize(), desc="Reset all window sizes"),
 
     Key([mod], "g", lazy.spawn("/home/miron/realhome/tools/r-quick-share.AppImage"), desc="Get (quick share)"),
-    Key([mod], "o", lazy.spawn("/home/miron/.config/qtile/scripts/toggle-screen.sh"), desc="Turn off the screen"),
 
     Key([mod], "Return", lazy.spawn(terminal), desc="Launch terminal"),
     Key([mod], "s", lazy.spawn("flameshot gui"), desc="Launch terminal"),
