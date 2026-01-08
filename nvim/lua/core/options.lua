@@ -68,3 +68,5 @@ vim.api.nvim_create_autocmd('LspAttach', {
     end
   end,
 })
+
+vim.cmd([[ :set langmap=ФИСВУАПРШОЛДЬТЩЗЙКЫЕГМЦЧНЯ;ABCDEFGHIJKLMNOPQRSTUVWXYZ,фисвуапршолдьтщзйкыегмцчня;abcdefghijklmnopqrstuvwxyz ]])

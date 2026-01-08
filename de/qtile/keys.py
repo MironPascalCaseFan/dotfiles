@@ -18,10 +18,21 @@ keys = [
     Key([mod, "shift"], "j", lazy.layout.shuffle_down(), desc="Move window down"),
     Key([mod, "shift"], "k", lazy.layout.shuffle_up(), desc="Move window up"),
 
-    Key([mod], "g", lazy.next_screen(), desc="Next screen"),
+    # mod1 means alt key
+    Key([mod, "mod1"], "h", lazy.layout.grow_left(), desc="Grow window to the left"),
+    Key([mod, "mod1"], "l", lazy.layout.grow_right(), desc="Grow window to the right"),
+    Key([mod, "mod1"], "j", lazy.layout.grow_down(), desc="Grow window down"),
+    Key([mod, "mod1"], "k", lazy.layout.grow_up(), desc="Grow window up"),
+    Key([mod], "n", lazy.layout.normalize(), desc="Reset all window sizes"),
+
+    Key([mod], "g", lazy.spawn("/home/miron/realhome/tools/r-quick-share.AppImage"), desc="Get (quick share)"),
 
     Key([mod], "Return", lazy.spawn(terminal), desc="Launch terminal"),
     Key([mod], "s", lazy.spawn("flameshot gui"), desc="Launch terminal"),
+    Key([mod], "period",
+                lazy.spawn("sh -c 'i3lock -i ~/.config/wallpapers/lockscreen.png && sleep 0.1 && xset dpms force off'"),
+                desc="Lock screen and turn off monitor"
+    ),
     Key([mod], "Tab", lazy.next_layout(), desc="Toggle between layouts"),
     Key([mod], "q", lazy.window.kill(), desc="Kill focused window"),
     Key([mod], "f", lazy.window.toggle_fullscreen(), desc="Toggle fullscreen on the focused window"),
