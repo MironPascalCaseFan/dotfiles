@@ -16,10 +16,10 @@ sep_config = {
 sing_box_widget = SingBoxStatus(
     foreground="#928374",
     start_cmd=[
-        "/home/miron/repos/vpn/sing-box/sing-box",
+        "/home/miroshQa/realhome/tools/sing-box/sing-box",
         "run",
         "-c",
-        "/home/miron/repos/vpn/sing-box/config.json",
+        "/home/miroshQa/realhome/tools/sing-box/config.json",
     ],
     update_interval=5,
 )
