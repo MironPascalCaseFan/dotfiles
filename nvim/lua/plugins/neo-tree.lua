@@ -3,6 +3,7 @@ vim.pack.add {
   "https://github.com/nvim-tree/nvim-web-devicons",
   "https://github.com/MunifTanjim/nui.nvim",
   "https://github.com/nvim-neo-tree/neo-tree.nvim",
+  "https://github.com/stevearc/oil.nvim",
 }
 
 require("neo-tree").setup {
@@ -42,3 +43,9 @@ require("neo-tree").setup {
     },
   },
 }
+
+require("oil").setup( {
+  keymaps = {
+    ["<BS>"] = { "actions.parent", mode = "n" },
+  }
+})

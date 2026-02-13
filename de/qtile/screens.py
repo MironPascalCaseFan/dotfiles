@@ -13,8 +13,11 @@ sep_config = {
     "padding": 8,
 }
 
+text_fg = "#FDFBD4"
+bar_background = "#aec1eb"
+
 sing_box_widget = SingBoxStatus(
-    foreground="#928374",
+    foreground=text_fg,
     start_cmd=[
         "/home/miroshQa/realhome/tools/sing-box/sing-box",
         "run",
@@ -30,9 +33,9 @@ def create_bar(fontsize):
         [
             widget.GroupBox(
                 borderwidth=0,
-                block_highlight_text_color="#fabd2f",
-                active="#928374",
-                inactive="#928374",
+                block_highlight_text_color="#F7CA18",
+                active=text_fg,
+                inactive=text_fg,
                 disable_drag=True,
                 fontsize=fontsize,
                 padding_x=0,
@@ -41,30 +44,30 @@ def create_bar(fontsize):
             widget.Spacer(),
             widget.Net(
                 format="{down:.0f}{down_suffix} ↓↑ {up:.0f}{up_suffix}",
-                foreground="#928374",
+                foreground=text_fg,
             ),
             sing_box_widget,
             widget.Sep(**sep_config),
             widget.Clock(
                 format="󰥔 %I:%M",
-                foreground="#928374",
+                foreground=text_fg,
                 fontsize=fontsize,
             ),
             widget.Sep(**sep_config),
             widget.Memory(
                 fontsize=fontsize,
                 format="󰍛 {MemUsed:.0f}{mm}",
-                foreground="#928374",
+                foreground=text_fg,
             ),
             widget.Sep(**sep_config),
             widget.CPU(
                 fontsize=fontsize,
                 format="󰘚 {load_percent}%",
-                foreground="#928374",
+                foreground=text_fg,
             ),
             widget.ThermalSensor(
                 fontsize=fontsize,
-                foreground="#928374",
+                foreground=text_fg,
             ),
             widget.Sep(**sep_config),
             widget.Sep(**sep_config),
@@ -77,27 +80,27 @@ def create_bar(fontsize):
                 full_char="󰁹",
                 show_short_text=False,
                 not_charging_char="󰁹",
-                foreground="#928374",
+                foreground=text_fg,
             ),
             widget.Sep(**sep_config),
-            widget.Volume(device="pulse", foreground="#928374", fmt="{}"),
+            widget.Volume(device="pulse", foreground=text_fg, fmt="{}"),
             widget.Sep(**sep_config),
             widget.Backlight(
                 fontsize=fontsize,
                 fmt="󰃚 {}",
                 backlight_name=get_backlight_device(),
-                foreground="#928374",
+                foreground=text_fg,
             ),
             widget.Sep(**sep_config),
             widget.KeyboardLayout(
                 fontsize=fontsize,
                 configured_keyboards=["us", "ru"],
-                foreground="#928374",
+                foreground=text_fg,
             ),
         ],
         fontsize,
         opacity=1,
-        background="#282828",
+        background=bar_background,
     )
 
 
