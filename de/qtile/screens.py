@@ -13,8 +13,10 @@ sep_config = {
     "padding": 8,
 }
 
-text_fg = "#FDFBD4"
+text_fg = "#ffedaa"
 bar_background = "#aec1eb"
+active = "#fb2a73"
+
 
 sing_box_widget = SingBoxStatus(
     foreground=text_fg,
@@ -33,7 +35,7 @@ def create_bar(fontsize):
         [
             widget.GroupBox(
                 borderwidth=0,
-                block_highlight_text_color="#F7CA18",
+                block_highlight_text_color=active,
                 active=text_fg,
                 inactive=text_fg,
                 disable_drag=True,
