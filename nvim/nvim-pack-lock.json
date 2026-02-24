@@ -17,15 +17,15 @@
       "src": "https://github.com/j-hui/fidget.nvim"
     },
     "fzf-lua": {
-      "rev": "578a11f",
+      "rev": "72ec224",
       "src": "https://github.com/ibhagwan/fzf-lua"
     },
     "gitsigns.nvim": {
-      "rev": "42d6aed",
+      "rev": "9f3c6dd",
       "src": "https://github.com/lewis6991/gitsigns.nvim"
     },
     "grug-far.nvim": {
-      "rev": "794f03c",
+      "rev": "275dbed",
       "src": "https://github.com/MagicDuck/grug-far.nvim"
     },
     "mason.nvim": {
@@ -33,15 +33,15 @@
       "src": "https://github.com/williamboman/mason.nvim"
     },
     "neo-tree.nvim": {
-      "rev": "93a867a",
+      "rev": "f4102f5",
       "src": "https://github.com/nvim-neo-tree/neo-tree.nvim"
     },
     "neogit": {
-      "rev": "d8bf9102",
+      "rev": "0ea6b87a",
       "src": "https://github.com/NeogitOrg/neogit"
     },
     "none-ls.nvim": {
-      "rev": "3c206df",
+      "rev": "f61f46d",
       "src": "https://github.com/nvimtools/none-ls.nvim"
     },
     "nui.nvim": {
@@ -49,19 +49,19 @@
       "src": "https://github.com/MunifTanjim/nui.nvim"
     },
     "nvim-autopairs": {
-      "rev": "c2a0dd0",
+      "rev": "59bce2e",
       "src": "https://github.com/windwp/nvim-autopairs"
     },
     "nvim-cmp": {
-      "rev": "85bbfad",
+      "rev": "da88697",
       "src": "https://github.com/hrsh7th/nvim-cmp"
     },
     "nvim-dap": {
-      "rev": "cdfd55a",
+      "rev": "7b11f48",
       "src": "https://github.com/mfussenegger/nvim-dap"
     },
     "nvim-lspconfig": {
-      "rev": "92ee7d4",
+      "rev": "ab5139c",
       "src": "https://github.com/neovim/nvim-lspconfig"
     },
     "nvim-treesitter": {
@@ -73,16 +73,12 @@
       "src": "https://github.com/nvim-treesitter/nvim-treesitter-textobjects"
     },
     "nvim-ts-autotag": {
-      "rev": "c4ca798",
+      "rev": "8e1c0a3",
       "src": "https://github.com/windwp/nvim-ts-autotag"
     },
     "nvim-web-devicons": {
-      "rev": "8033534",
+      "rev": "746ffbb",
       "src": "https://github.com/nvim-tree/nvim-web-devicons"
-    },
-    "oil.nvim": {
-      "rev": "f55b25e",
-      "src": "https://github.com/stevearc/oil.nvim"
     },
     "one-small-step-for-vimkind": {
       "rev": "1af6ffb",
@@ -95,18 +91,6 @@
     "treesj": {
       "rev": "186084d",
       "src": "https://github.com/Wansmer/treesj"
-    },
-    "vim-dadbod": {
-      "rev": "6d1d41d",
-      "src": "https://github.com/tpope/vim-dadbod"
-    },
-    "vim-dadbod-completion": {
-      "rev": "a8dac0b",
-      "src": "https://github.com/kristijanhusak/vim-dadbod-completion"
-    },
-    "vim-dadbod-ui": {
-      "rev": "48c4f27",
-      "src": "https://github.com/kristijanhusak/vim-dadbod-ui"
     },
     "which-key.nvim": {
       "rev": "3aab214",
