@@ -1,6 +1,6 @@
 vim.g._ts_force_sync_parsing = true
 vim.cmd("colorscheme gruvboxbaby")
-require("vim._extui").enable {}
+require("vim._core.ui2").enable {}
 require("core.options")
 require("core.autocommands")
 require("core.keymaps")
