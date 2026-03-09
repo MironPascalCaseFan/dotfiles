@@ -85,7 +85,7 @@ def create_bar(fontsize):
                 foreground=text_fg,
             ),
             widget.Sep(**sep_config),
-            widget.Volume(device="pulse", foreground=text_fg, fmt="{}"),
+            widget.Volume(foreground=text_fg, fmt="{}"),
             widget.Sep(**sep_config),
             widget.Backlight(
                 fontsize=fontsize,
