@@ -6,7 +6,7 @@ from utils import *
 from widgets import SingBoxStatus
 
 widget_radius = 0
-wallpaper = "~/.config/wallpapers/literallymewallpapernatural.jpg"
+wallpaper = "~/.config/wallpapers/green-sun.jpg"
 
 sep_config = {
     "size_percent": 0,
@@ -14,7 +14,7 @@ sep_config = {
 }
 
 text_fg = "#ffedaa"
-bar_background = "#aec1eb"
+bar_background = "#282828"
 active = "#fb2a73"
 
 
