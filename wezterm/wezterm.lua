@@ -10,6 +10,7 @@ config.audible_bell = "Disabled"
 config.window_decorations = "INTEGRATED_BUTTONS|RESIZE"
 config.use_fancy_tab_bar = true
 config.window_background_opacity = 1
+config.line_height = 1.1
 config.max_fps = 240
 config.initial_rows = 36
 config.initial_cols = 140
@@ -52,6 +53,7 @@ config.keys = {
   { key = "w",     mods = "ALT",  action = act.ShowLauncherArgs({ flags = "FUZZY|WORKSPACES" }) },
   { key = "o",     mods = "ALT",  action = act.TogglePaneZoomState },
   { key = 'z',     mods = 'ALT',  action = act.ShowDebugOverlay },
+  { key = "j",     mods = "ALT",  action = act.QuickSelect },
 }
 
 config.key_tables = {
